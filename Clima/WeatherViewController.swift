@@ -93,6 +93,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate,ChangeC
         else {
             cityLabel.text = "Weather Unavailable"
         }
+        
     }
 
     
@@ -121,6 +122,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate,ChangeC
     
     //Write the didUpdateLocations method here:
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         let location = locations[locations.count - 1]
         
         if location.horizontalAccuracy > 0 {
@@ -133,6 +135,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate,ChangeC
         
             getWeatherData(url: WEATHER_URL, parameters: params)
         }
+        
     }
     
     
